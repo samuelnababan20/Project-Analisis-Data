@@ -2,7 +2,7 @@
 
 ## Setup Environment
 ```
-pip install numpy pandas matplotlib seaborn streamlit babel request
+pip install -r requirements.txt
 ```
 
 ## Run Streamlit App
