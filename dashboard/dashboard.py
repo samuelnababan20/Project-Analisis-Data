@@ -11,13 +11,13 @@ def main():
     all_df = pd.read_csv('dashboard/all_data.csv')
 
     # Pertanyaan 1: Pola Penggunaan Sepeda
-    st.header("Pola Penggunaan Sepeda")
-    st.write("Grafik di bawah ini menunjukkan pola penggunaan sepeda selama periode waktu yang diamati.")
+    st.header("Pengaruh Musim terhadap jumlah pengguna sepeda")
+    st.write("Grafik di bawah ini menunjukkan Pengaruh Musim terhadap jumlah pengguna sepeda.")
     fig, ax = plt.subplots(figsize=(10, 6))
-    sns.lineplot(x='dteday', y='cnt_x', data=all_df, ax=ax)
-    ax.set_xlabel('Tanggal')
+    sns.lineplot(x='season_y', y='cnt_y', data=all_df, ax=ax)
+    ax.set_xlabel('Season')
     ax.set_ylabel('Jumlah Penggunaan Sepeda')
-    ax.set_title('Pola Penggunaan Sepeda')
+    ax.set_title('Total Penyewaan Sepeda Berdasarkan Musim')
     st.pyplot(fig)
 
     # Pertanyaan 2: Hubungan antara Kondisi Cuaca dan Penggunaan Sepeda
