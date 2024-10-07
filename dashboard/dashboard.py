@@ -12,8 +12,8 @@ def main():
 
     # Pertanyaan 1: Pola Penggunaan Sepeda
     st.header("Pengaruh Musim terhadap jumlah pengguna sepeda")
-    season_data = all_df.groupby('season_y')['cnt_y'].sum().reset_index()
     st.write("Grafik di bawah ini menunjukkan Pengaruh Musim terhadap jumlah pengguna sepeda.")
+    season_data = all_df.groupby('season_y')['cnt_y'].sum().reset_index()
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.barplot(x='season_y', y='cnt_y', data=season_data, palette='coolwarm', ax=ax)
     ax.set_title('Pengaruh Musim terhadap jumlah pengguna sepeda')
