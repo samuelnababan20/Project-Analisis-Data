@@ -14,12 +14,13 @@ def main():
     st.header("Pengaruh Musim terhadap jumlah pengguna sepeda")
     st.write("Grafik di bawah ini menunjukkan Pengaruh Musim terhadap jumlah pengguna sepeda.")
     fig, ax = plt.subplots(figsize=(10, 6))
-    sns.lineplot(x='season_x', y='cnt_x', data=all_df, ax=ax)
-    ax.set_xlabel('Season')
-    ax.set_ylabel('Jumlah Penggunaan Sepeda')
-    ax.set_title('Total Penyewaan Sepeda Berdasarkan Musim')
+    sns.barplot(x='season_y', y='cnt_y', data=season_data, palette='coolwarm', ax=ax)
+    ax.set_title('Pengaruh Musim terhadap jumlah pengguna sepeda')
+    ax.set_xlabel('Season (1 = Spring, 2 = Summer, 3 = Fall, 4 = Winter)')
+    ax.set_ylabel('Jumlah Pengguna Sepeda')
     st.pyplot(fig)
 
+    
     # Pertanyaan 2: Hubungan antara Kondisi Cuaca dan Penggunaan Sepeda
     st.header("Hubungan antara Kondisi Cuaca dan Penggunaan Sepeda")
     st.write("Grafik di bawah ini menunjukkan hubungan antara suhu dan jumlah penggunaan sepeda.")
