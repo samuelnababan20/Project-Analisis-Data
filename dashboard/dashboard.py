@@ -14,7 +14,7 @@ def main():
     st.header("Pengaruh Musim terhadap jumlah pengguna sepeda")
     st.write("Grafik di bawah ini menunjukkan Pengaruh Musim terhadap jumlah pengguna sepeda.")
     fig, ax = plt.subplots(figsize=(10, 6))
-    sns.lineplot(x='season_y', y='cnt_y', data=all_df, ax=ax)
+    sns.lineplot(x='season_x', y='cnt_x', data=all_df, ax=ax)
     ax.set_xlabel('Season')
     ax.set_ylabel('Jumlah Penggunaan Sepeda')
     ax.set_title('Total Penyewaan Sepeda Berdasarkan Musim')
