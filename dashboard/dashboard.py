@@ -8,7 +8,7 @@ def main():
     st.title("Bike Sharing Data Dashboard")
 
     # Load data
-    all_df = pd.read_csv('dashboard/all_data.csv')
+    all_df = pd.read_csv(r'./dashboard/all_data.csv')
 
     # Pertanyaan 1: Pola Penggunaan Sepeda
     st.header("Pengaruh Musim terhadap jumlah pengguna sepeda")
