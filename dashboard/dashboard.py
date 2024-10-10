@@ -39,7 +39,7 @@ def main():
     plt.figure(figsize=(10, 6))
     sns.heatmap(correlation_weather, annot=True, cmap='coolwarm', fmt=".2f")
     plt.title('Correlation Heatmap - Weather Variables vs. Bike Rental Count')
-    plt.show()
+    st.pyplot(fig)
 
 if __name__ == "__main__":
     main()
