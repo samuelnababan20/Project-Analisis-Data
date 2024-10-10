@@ -32,5 +32,13 @@ def main():
     ax.set_title('Hubungan antara Suhu dan Penggunaan Sepeda')
     st.pyplot(fig)
 
+    st.write("Grafik di bawah ini menunjukkan hubungan antara suhu dan jumlah penggunaan sepeda.")
+    correlation_weather = all_df[['temp_x', 'hum_x', 'windspeed_x', 'cnt_x', 'temp_y', 'hum_y', 'windspeed_y', 'cnt_x']].corr()
+    fig, ax = plt.subplots(figsize=(8, 6))
+    plt.figure(figsize=(10, 6))
+    sns.heatmap(correlation_weather, annot=True, cmap='coolwarm', fmt=".2f")
+    plt.title('Correlation Heatmap - Weather Variables vs. Bike Rental Count')
+    plt.show()
+
 if __name__ == "__main__":
     main()
