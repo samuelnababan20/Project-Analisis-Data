@@ -32,14 +32,25 @@ def main():
     ax.set_title('Hubungan antara Suhu dan Penggunaan Sepeda')
     st.pyplot(fig)
 
+
     
-    correlation_weather = all_df[['temp_x', 'hum_x', 'windspeed_x', 'cnt_x', 'temp_y', 'hum_y', 'windspeed_y', 'cnt_x']].corr()
-    st.title('Hubungan antara Cuaca dan jumlah pengguna sepeda')
-    st.write("Visuallisasi di bawah ini menunjukkan hubungan antara cuaca dan jumlah penggunaan sepeda.")
-    plt.figure(figsize=(10, 6))
-    sns.heatmap(correlation_weather, annot=True, cmap='coolwarm', fmt=".2f")
-    plt.title('Correlation Heatmap - Weather Variables vs. Bike Rental Count')
-    st.pyplot(plt)
+    st.write("Grafik di bawah ini menunjukkan hubungan antara kecepatan angin dan jumlah penggunaan sepeda.")
+    fig, ax = plt.subplot(figsize=(8, 6))
+    sns.scatterplot(x='windspeed_x', y='cnt_x', data=all_df, ax=ax)
+    ax.set_xlabel('Windspeed (m/s)')
+    ax.set_ylabel('Bike Rental Count')
+    ax.title('Scatter Plot of Windspeed vs. Bike Rental Count')
+    st.pyplot(fig)
+
+
+
+    st.write("Grafik di bawah ini menunjukkan hubungan antara kelembapan dan jumlah penggunaan sepeda.")
+    fig, ax = plt.subplot(figsize=(8, 6))
+    sns.scatterplot(x='hum_x', y='cnt_x', data=all_df, ax=ax)
+    ax.set_xlabel('Humidity (%)')
+    ax.set_ylabel('Bike Rental Count')
+    ax.title('Scatter Plot of Humidity vs. Bike Rental Count')
+    st.pyplot(fig)
 
 if __name__ == "__main__":
     main()
