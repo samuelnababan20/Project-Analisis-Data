@@ -35,7 +35,7 @@ def main():
 
     
     st.write("Grafik di bawah ini menunjukkan hubungan antara kecepatan angin dan jumlah penggunaan sepeda.")
-    fig, ax = plt.subplot(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(8, 6))
     sns.scatterplot(x='windspeed_x', y='cnt_x', data=all_df, ax=ax)
     ax.set_xlabel('Windspeed (m/s)')
     ax.set_ylabel('Bike Rental Count')
@@ -45,7 +45,7 @@ def main():
 
 
     st.write("Grafik di bawah ini menunjukkan hubungan antara kelembapan dan jumlah penggunaan sepeda.")
-    fig, ax = plt.subplot(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(8, 6))
     sns.scatterplot(x='hum_x', y='cnt_x', data=all_df, ax=ax)
     ax.set_xlabel('Humidity (%)')
     ax.set_ylabel('Bike Rental Count')
