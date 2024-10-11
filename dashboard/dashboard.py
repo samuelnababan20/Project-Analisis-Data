@@ -33,20 +33,20 @@ def main():
     st.pyplot(fig)
 
 
-    
+    st.header("Hubungan antara Kecepatan Angin dan Penggunaan Sepeda")
     st.write("Grafik di bawah ini menunjukkan hubungan antara kecepatan angin dan jumlah penggunaan sepeda.")
     fig, ax = plt.subplots(figsize=(8, 6))
-    sns.scatterplots(x='windspeed_x', y='cnt_x', data=all_df, ax=ax)
+    sns.scatterplot(x='windspeed_x', y='cnt_x', data=all_df, ax=ax)
     ax.set_xlabel('Kecepatan Angin (m/s)')
     ax.set_ylabel('Jumlah Penggunaan Sepeda')
     ax.title('Hubungan antara Kecepatan Angin dan Penggunaan Sepeda')
     st.pyplot(fig)
 
 
-
+    st.header("Hubungan antara Kelembapan dan Penggunaan Sepeda")
     st.write("Grafik di bawah ini menunjukkan hubungan antara kelembapan dan jumlah penggunaan sepeda.")
     fig, ax = plt.subplots(figsize=(8, 6))
-    sns.scatterplots(x='hum_x', y='cnt_x', data=all_df, ax=ax)
+    sns.scatterplot(x='hum_x', y='cnt_x', data=all_df, ax=ax)
     ax.set_xlabel('Kelembapan (%)')
     ax.set_ylabel('Jumlah Penggunaan Sepeda')
     ax.title('Hubungan antara Kelembapan dan Penggunaan Sepeda')
